@@ -35,7 +35,7 @@
   grid-area: controls;
 }
 
-.controls label {
+.controls .slider__label {
   display: block;
   cursor: pointer;
   background-color: rgb(10, 10, 143);
@@ -45,17 +45,35 @@
   border: 4px solid rgb(10, 10, 143);
 }
 
-.controls label:hover {
+.controls .slider__label:hover {
   background-color: bisque;
   border-color: bisque;
 }
 
-#input-slide0:checked ~ .controls label:nth-of-type(1),
-#input-slide1:checked ~ .controls label:nth-of-type(2),
-#input-slide2:checked ~ .controls label:nth-of-type(3),
-#input-slide3:checked ~ .controls label:nth-of-type(4),
-#input-slide4:checked ~ .controls label:nth-of-type(5) {
+
+.labels {
+  grid-area: label;
+}
+
+.item-caption {
+  display: none;
+}
+
+
+#input-slide0:checked ~ .controls .slider__label:nth-of-type(1),
+#input-slide1:checked ~ .controls .slider__label:nth-of-type(2),
+#input-slide2:checked ~ .controls .slider__label:nth-of-type(3),
+#input-slide3:checked ~ .controls .slider__label:nth-of-type(4),
+#input-slide4:checked ~ .controls .slider__label:nth-of-type(5) {
   background-color: bisque;
+}
+
+#input-slide0:checked ~ .labels .item-caption:nth-of-type(1),
+#input-slide1:checked ~ .labels .item-caption:nth-of-type(2),
+#input-slide2:checked ~ .labels .item-caption:nth-of-type(3),
+#input-slide3:checked ~ .labels .item-caption:nth-of-type(4),
+#input-slide4:checked ~ .labels .item-caption:nth-of-type(5) {
+  display: block;
 }
 
 #input-slide0:checked ~ .slider .slider__items {
