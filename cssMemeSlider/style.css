@@ -10,6 +10,7 @@
 
 .slider {
   display: flex;
+  flex-direction: column;
   grid-area: slider;
   margin: 0 auto;
   overflow: hidden;
@@ -18,11 +19,15 @@
 
 .slider__items {
   display: flex;
+  width: 500%;
 }
 
 .slider__item {
-  width: 500px;
-  height: 500px;
+  width: 20%;
+}
+
+.slider__image {
+  width: 100%;
 }
 
 .input {
