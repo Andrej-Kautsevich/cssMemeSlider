@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: auto 60%;
@@ -5,8 +13,8 @@
     "slider slider"
     "label controls";
   width: 60vw;
-  height: 95vh;
-  margin: 0 auto;
+  height: 96vh;
+  margin: 2vh auto;
 }
 
 .slider {
@@ -15,6 +23,7 @@
   grid-area: slider;
   overflow: hidden;
   margin-bottom: 1rem;
+  background-color: black;
 }
 
 .slider__items {
@@ -42,6 +51,7 @@
 .controls {
   display: inline-flex;
   justify-content: flex-end;
+  align-items: center;
   grid-area: controls;
   gap: 0.5em;
 }
