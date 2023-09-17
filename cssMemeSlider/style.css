@@ -102,6 +102,7 @@ body {
 #input-slide8:checked ~ .controls .slider__label:nth-of-type(9),
 #input-slide9:checked ~ .controls .slider__label:nth-of-type(10) {
   background-color: bisque;
+  pointer-events: none;
 }
 
 
