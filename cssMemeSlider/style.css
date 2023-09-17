@@ -9,10 +9,11 @@ body {
 .wrapper {
   display: grid;
   grid-template-columns: auto 60%;
+  grid-template-rows: 90% auto;
   grid-template-areas: 
     "slider slider"
     "label controls";
-  width: 60vw;
+  width: 80vw;
   height: 96vh;
   margin: 2vh auto;
 }
@@ -59,11 +60,11 @@ body {
   display: block;
   cursor: pointer;
   background-color: rgb(10, 10, 143);
-  height: 1.5em;
-  width: 1.5em;
+  height: 2em;
+  width: 2em;
   border-radius: 50%;
   /* border: 0.25em solid rgb(10, 10, 143); */
-  border: 0.25em solid transparent;
+  border: 0.4em solid transparent;
   background-clip: padding-box;
 }
 
@@ -209,6 +210,7 @@ body {
   }
 
   .item-caption {
-    margin-bottom: 0.5em; 
+    margin-bottom: 0.5em;
+    font-size: larger; 
   }
 }
