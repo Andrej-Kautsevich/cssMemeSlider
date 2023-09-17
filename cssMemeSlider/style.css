@@ -115,7 +115,7 @@ body {
   transition: 0.15s;
 }
 
-.slider__label:active {
+.control:active {
   opacity: 0.5 !important;
 }
 
