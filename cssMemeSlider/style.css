@@ -177,3 +177,21 @@ body {
   transform: translate(-90%);
   transition: 0.5s ease;
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+  }
+
+  .controls {
+    order: 2;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .labels {
+    order: 3;
+  }
+}
