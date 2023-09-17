@@ -82,7 +82,8 @@ body {
 
 .item-caption {
   width: 10%;
-  font-size: 1.5rem;
+  font-size: 1em;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 #input-slide0:checked ~ .controls .slider__label:nth-of-type(1),
@@ -180,6 +181,16 @@ body {
   transition: 0.5s ease;
 }
 
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-template-columns: auto 50%;
+  }
+
+  .item-caption {
+    font-size: larger;
+  }
+}
+
 @media (max-width: 768px) {
   .wrapper {
     display: flex;
@@ -190,10 +201,14 @@ body {
   .controls {
     order: 2;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5em;
   }
 
   .labels {
     order: 3;
+  }
+
+  .item-caption {
+    margin-bottom: 0.5em; 
   }
 }
