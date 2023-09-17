@@ -187,8 +187,13 @@ body {
     grid-template-columns: auto 50%;
   }
 
+  .controls .slider__label {
+    height: 2.4em;
+    width: 2.4em;
+  }
+
   .item-caption {
-    font-size: larger;
+    font-size: 1.5em;
   }
 }
 
