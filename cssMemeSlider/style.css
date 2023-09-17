@@ -49,26 +49,25 @@ body {
   display: none;
 }
 
-.controls {
+.controls-wrapper {
   display: inline-flex;
   justify-content: flex-end;
   grid-area: controls;
   gap: 0.25em;
 }
 
-.controls .slider__label {
+.control {
   display: block;
   cursor: pointer;
   background-color: rgb(10, 10, 143);
   height: 2em;
   width: 2em;
   border-radius: 50%;
-  /* border: 0.25em solid rgb(10, 10, 143); */
   border: 0.4em solid transparent;
   background-clip: padding-box;
 }
 
-.labels {
+.captions {
   display: flex;
   flex-direction: column;
   grid-area: label;
@@ -76,7 +75,7 @@ body {
   margin-right: 1em;
 }
 
-.caption-wrapper {
+.captions-wrapper {
   display: flex;
   width: 1000%;
 }
@@ -87,97 +86,97 @@ body {
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-#input-slide0:checked ~ .controls .slider__label:nth-of-type(1),
-#input-slide1:checked ~ .controls .slider__label:nth-of-type(2),
-#input-slide2:checked ~ .controls .slider__label:nth-of-type(3),
-#input-slide3:checked ~ .controls .slider__label:nth-of-type(4),
-#input-slide4:checked ~ .controls .slider__label:nth-of-type(5),
-#input-slide5:checked ~ .controls .slider__label:nth-of-type(6),
-#input-slide6:checked ~ .controls .slider__label:nth-of-type(7),
-#input-slide7:checked ~ .controls .slider__label:nth-of-type(8),
-#input-slide8:checked ~ .controls .slider__label:nth-of-type(9),
-#input-slide9:checked ~ .controls .slider__label:nth-of-type(10) {
+#input-slide0:checked ~ .controls-wrapper .control:nth-of-type(1),
+#input-slide1:checked ~ .controls-wrapper .control:nth-of-type(2),
+#input-slide2:checked ~ .controls-wrapper .control:nth-of-type(3),
+#input-slide3:checked ~ .controls-wrapper .control:nth-of-type(4),
+#input-slide4:checked ~ .controls-wrapper .control:nth-of-type(5),
+#input-slide5:checked ~ .controls-wrapper .control:nth-of-type(6),
+#input-slide6:checked ~ .controls-wrapper .control:nth-of-type(7),
+#input-slide7:checked ~ .controls-wrapper .control:nth-of-type(8),
+#input-slide8:checked ~ .controls-wrapper .control:nth-of-type(9),
+#input-slide9:checked ~ .controls-wrapper .control:nth-of-type(10) {
   background-color: bisque;
   transition: 0.5s;
-  box-shadow: inset 0 0 0 3px rgb(10, 10, 143);
+  box-shadow: inset 0 0 0 0.2em rgb(10, 10, 143);
 }
 
-#input-slide0:not(:checked) ~ .controls .slider__label:nth-of-type(1):hover,
-#input-slide1:not(:checked) ~ .controls .slider__label:nth-of-type(2):hover,
-#input-slide2:not(:checked) ~ .controls .slider__label:nth-of-type(3):hover,
-#input-slide3:not(:checked) ~ .controls .slider__label:nth-of-type(4):hover,
-#input-slide4:not(:checked) ~ .controls .slider__label:nth-of-type(5):hover,
-#input-slide5:not(:checked) ~ .controls .slider__label:nth-of-type(6):hover,
-#input-slide6:not(:checked) ~ .controls .slider__label:nth-of-type(7):hover,
-#input-slide7:not(:checked) ~ .controls .slider__label:nth-of-type(8):hover,
-#input-slide8:not(:checked) ~ .controls .slider__label:nth-of-type(9):hover,
-#input-slide9:not(:checked) ~ .controls .slider__label:nth-of-type(10):hover {
+#input-slide0:not(:checked) ~ .controls-wrapper .control:nth-of-type(1):hover,
+#input-slide1:not(:checked) ~ .controls-wrapper .control:nth-of-type(2):hover,
+#input-slide2:not(:checked) ~ .controls-wrapper .control:nth-of-type(3):hover,
+#input-slide3:not(:checked) ~ .controls-wrapper .control:nth-of-type(4):hover,
+#input-slide4:not(:checked) ~ .controls-wrapper .control:nth-of-type(5):hover,
+#input-slide5:not(:checked) ~ .controls-wrapper .control:nth-of-type(6):hover,
+#input-slide6:not(:checked) ~ .controls-wrapper .control:nth-of-type(7):hover,
+#input-slide7:not(:checked) ~ .controls-wrapper .control:nth-of-type(8):hover,
+#input-slide8:not(:checked) ~ .controls-wrapper .control:nth-of-type(9):hover,
+#input-slide9:not(:checked) ~ .controls-wrapper .control:nth-of-type(10):hover {
   background-color: bisque;
   transition: 0.15s;
 }
 
-.controls .slider__label:active {
+.slider__label:active {
   opacity: 0.5 !important;
 }
 
 
 
 #input-slide0:checked ~ .slider .slider__items,
-#input-slide0:checked ~ .labels .caption-wrapper {
+#input-slide0:checked ~ .captions .captions-wrapper {
   transform: translate(0%);
   transition: 0.5s ease;
 }
 
 #input-slide1:checked ~ .slider .slider__items,
-#input-slide1:checked ~ .labels .caption-wrapper {
+#input-slide1:checked ~ .captions .captions-wrapper {
   transform: translate(-10%);
   transition: 0.5s ease;
 }
 
 #input-slide2:checked ~ .slider .slider__items,
-#input-slide2:checked ~ .labels .caption-wrapper {
+#input-slide2:checked ~ .captions .captions-wrapper {
   transform: translate(-20%);
   transition: 0.5s ease;
 }
 
 #input-slide3:checked ~ .slider .slider__items, 
-#input-slide3:checked ~ .labels .caption-wrapper {
+#input-slide3:checked ~ .captions .captions-wrapper {
   transform: translate(-30%);
   transition: 0.5s ease;
 }
 
 #input-slide4:checked ~ .slider .slider__items,
-#input-slide4:checked ~ .labels .caption-wrapper {
+#input-slide4:checked ~ .captions .captions-wrapper {
   transform: translate(-40%);
   transition: 0.5s ease;
 }
 
 #input-slide5:checked ~ .slider .slider__items,
-#input-slide5:checked ~ .labels .caption-wrapper {
+#input-slide5:checked ~ .captions .captions-wrapper {
   transform: translate(-50%);
   transition: 0.5s ease;
 }
 
 #input-slide6:checked ~ .slider .slider__items,
-#input-slide6:checked ~ .labels .caption-wrapper {
+#input-slide6:checked ~ .captions .captions-wrapper {
   transform: translate(-60%);
   transition: 0.5s ease;
 }
 
 #input-slide7:checked ~ .slider .slider__items,
-#input-slide7:checked ~ .labels .caption-wrapper {
+#input-slide7:checked ~ .captions .captions-wrapper {
   transform: translate(-70%);
   transition: 0.5s ease;
 }
 
 #input-slide8:checked ~ .slider .slider__items,
-#input-slide8:checked ~ .labels .caption-wrapper {
+#input-slide8:checked ~ .captions .captions-wrapper {
   transform: translate(-80%);
   transition: 0.5s ease;
 }
 
 #input-slide9:checked ~ .slider .slider__items,
-#input-slide9:checked ~ .labels .caption-wrapper {
+#input-slide9:checked ~ .captions .captions-wrapper {
   transform: translate(-90%);
   transition: 0.5s ease;
 }
@@ -187,7 +186,7 @@ body {
     grid-template-columns: auto 50%;
   }
 
-  .controls .slider__label {
+  .control {
     height: 2.4em;
     width: 2.4em;
   }
@@ -204,13 +203,13 @@ body {
     width: 95vw;
   }
 
-  .controls {
+  .controls-wrapper {
     order: 2;
     justify-content: center;
     margin-bottom: 0.5em;
   }
 
-  .labels {
+  .captions {
     order: 3;
   }
 
